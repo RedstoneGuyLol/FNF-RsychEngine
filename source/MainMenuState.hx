@@ -147,11 +147,6 @@ class MainMenuState extends MusicBeatState
 				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
 				giveAchievement();
 				ClientPrefs.saveSettings();
-			var achieveID:Int = Achievements.getAchievementIndex('friday_night_rsych');
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) { //You cool :O
-				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
-				giveAchievement();
-				ClientPrefs.saveSettings();
 			}
 		}
 		#end
