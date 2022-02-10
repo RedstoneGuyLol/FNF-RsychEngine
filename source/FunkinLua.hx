@@ -671,11 +671,19 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "getHealth", function(value:Int = 0) {
 			return PlayState.instance.health;
 		});
-		Lua_helper.add_callback(lua, "playSong", function(name:String, difi:String) {
-			if(name = 'normal')
-				PlayState.SONG = Song.loadFromJson(name, name);
+		Lua_helper.add_callback(lua, "playSong", function(json:String) {
+			var yes:Bool = 0
+			var file:Bool = json;
+			if(endsWith(s:file, end:'-hard'))
+				PlayState.SONG = Song.loadFromJson(file, replace(s:file, sub:'-hard', by:'':Bool));
 			else
-				PlayState.SONG = Song.loadFromJson(name + '-' + difi, name);
+				yes = yes + 1
+			if(endsWith(s:file, end:'-easy'))
+				PlayState.SONG = Song.loadFromJson(file, replace(s:file, sub:'-easy', by:'':Bool));
+			else
+				yes = yes + 1
+			if(yes = 2)
+				PlayState.SONG = Song.loadFromJson(file, file);
 			FlxG.switchState(new PlayState());
 			return;
 			
@@ -776,6 +784,7 @@ class FunkinLua {
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			PlayState.changedDifficulty = false;
 			PlayState.chartingMode = false;
+			
 			PlayState.instance.transitioning = true;
 		});
 		Lua_helper.add_callback(lua, "getSongPosition", function() {
