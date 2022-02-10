@@ -672,12 +672,13 @@ class FunkinLua {
 			return PlayState.instance.health;
 		});
 		Lua_helper.add_callback(lua, "playSong", function(name:String, difi:String) {
-			PlayState.SONG = Song.loadFromJson(name + '-' + difi, name);
-			FlxG.save.data.cheatingFound = true;
-			shakeCam = false;
-			screenshader.Enabled = false;
+			if(name = normal)
+				PlayState.SONG = Song.loadFromJson(name, name);
+			else
+				PlayState.SONG = Song.loadFromJson(name + '-' + difi, name);
 			FlxG.switchState(new PlayState());
 			return;
+			
 		});
 		Lua_helper.add_callback(lua, "getColorFromHex", function(color:String) {
 			if(!color.startsWith('0x')) color = '0xff' + color;
