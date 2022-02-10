@@ -672,7 +672,7 @@ class FunkinLua {
 			return PlayState.instance.health;
 		});
 		Lua_helper.add_callback(lua, "playSong", function(name:String, difi:String) {
-			if(name = normal)
+			if(name = 'normal')
 				PlayState.SONG = Song.loadFromJson(name, name);
 			else
 				PlayState.SONG = Song.loadFromJson(name + '-' + difi, name);
