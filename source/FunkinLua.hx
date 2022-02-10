@@ -673,7 +673,7 @@ class FunkinLua {
 		});
 		Lua_helper.add_callback(lua, "playSong", function(json:String) {
 			var yes:Bool = 0
-			var file:Bool = json
+			var file:Bool = json;
 			if(endsWith(s:file, end:'-hard'))
 				PlayState.SONG = Song.loadFromJson(file, replace(s:file, sub:'-hard', by:'':Bool));
 			else
