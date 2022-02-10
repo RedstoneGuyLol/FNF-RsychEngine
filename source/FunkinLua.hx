@@ -668,10 +668,12 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "addHealth", function(value:Float = 0) {
 			PlayState.instance.health += value;
 		});
-		Lua_helper.add_callback(lua, "getHealth", function() {
+		Lua_helper.add_callback(lua, "getHealth", function(value:Int = 0) {
 			return PlayState.instance.health;
 		});
-		
+		Lua_helper.add_callback(lua, "playSong", function(name:String, difi:String) {
+			PlayState.SONG = Song.loadFromJson(name + '-' + difi, "name");
+		});
 		Lua_helper.add_callback(lua, "getColorFromHex", function(color:String) {
 			if(!color.startsWith('0x')) color = '0xff' + color;
 			return Std.parseInt(color);
