@@ -7,7 +7,7 @@ Things i'm not going to do:
 - Stage Editor (Too Hard and I'll feel crappy after.)
 
 Todo:
-- [ ] More Options and Stuffs
+- [ ] Classic Mode (Old FNF Look)
 - [ ] playSong() Lua event (BREAKING ON)
 
 # Friday Night Funkin' - Psych Engine
