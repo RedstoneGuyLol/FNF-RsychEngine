@@ -1088,6 +1088,7 @@ class PlayState extends MusicBeatState
 				case "monster":
 					var whiteScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.WHITE);
 					add(whiteScreen);
+					
 					whiteScreen.scrollFactor.set();
 					whiteScreen.blend = ADD;
 					camHUD.visible = false;
@@ -2332,16 +2333,14 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		if(ratingName == '?') and (classicmode == 'false') {
+		if(ratingName == '?') {
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
-		} else (classicmode == 'false') {
+		} else {
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
 		}
 		
-		if(ratingName == '?') and (classicmode == 'true') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
-		} else (classicmode == 'true') {
-			scoreTxt.text = 'Score: ' + songScore;//Classic Mode aint gon work
+		if(classicmode == 'true') {
+			scoreTxt.text = 'Score: ' + songScore;
 		}
 
 		if(botplayTxt.visible) {
