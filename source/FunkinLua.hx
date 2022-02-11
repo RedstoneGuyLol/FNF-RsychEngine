@@ -676,8 +676,6 @@ class FunkinLua {
 			var folder:String = name;
 			PlayState.SONG = Song.loadFromJson(file, folder);
 			FlxG.switchState(new PlayState());
-			return;
-			
 		});
 		Lua_helper.add_callback(lua, "getColorFromHex", function(color:String) {
 			if(!color.startsWith('0x')) color = '0xff' + color;
