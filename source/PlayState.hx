@@ -58,6 +58,7 @@ import StageData;
 import FunkinLua;
 import DialogueBoxPsych;
 import Shaders;
+import options.VisualsUISubState;
 
 #if sys
 import sys.FileSystem;
@@ -2339,7 +2340,7 @@ class PlayState extends MusicBeatState
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
 		}
 		
-		if(classicmode == 'true') {
+		if(options.VisualsUISubState.classicmode == 'true') {
 			scoreTxt.text = 'Score: ' + songScore;
 		}
 
