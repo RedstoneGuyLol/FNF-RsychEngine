@@ -2332,10 +2332,16 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		if(ratingName == '?') {
+		if(ratingName == '?') and (classicmode == 'false') {
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
-		} else {
+		} else (classicmode == 'false') {
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
+		}
+		
+		if(ratingName == '?') and (classicmode == 'true') {
+			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
+		} else (classicmode == 'true') {
+			scoreTxt.text = 'Score: ' + songScore;//Classic Mode aint gon work
 		}
 
 		if(botplayTxt.visible) {
