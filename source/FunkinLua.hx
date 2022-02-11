@@ -671,19 +671,10 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "getHealth", function(value:Int = 0) {
 			return PlayState.instance.health;
 		});
-		Lua_helper.add_callback(lua, "playSong", function(json:String) {
-			var yes:Bool = 0;
-			var file:Bool = json;
-			if(endsWith(s:file, end:'-hard'))
-				PlayState.SONG = Song.loadFromJson(file, replace(s:file, sub:'-hard', by:'':Bool));
-			else
-				yes = yes + 1
-			if(endsWith(s:file, end:'-easy'))
-				PlayState.SONG = Song.loadFromJson(file, replace(s:file, sub:'-easy', by:'':Bool));
-			else
-				yes = yes + 1
-			if(yes = 2)
-				PlayState.SONG = Song.loadFromJson(file, file);
+		Lua_helper.add_callback(lua, "playSong", function(json:String, name:String) {
+			var file:String = json;
+			var folder:String = name;
+			PlayState.SONG = Song.loadFromJson(file, folder);
 			FlxG.switchState(new PlayState());
 			return;
 			
