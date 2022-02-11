@@ -58,7 +58,6 @@ import StageData;
 import FunkinLua;
 import DialogueBoxPsych;
 import Shaders;
-import options.VisualsUISubState;
 
 #if sys
 import sys.FileSystem;
