@@ -1,5 +1,7 @@
 # Friday Night Funkin' - Rsych Engine (Modified Psych)
 
+![](https://raw.githubusercontent.com/RedstoneGuyLol/FNF-RsychEngine/main/imgsreadme/rsychlogogithub.png)
+
 Rsych Engine is a fork/modified version of Psych just add things that i'm mad that don't exist.
 No frequent update tho.
 
