@@ -41,6 +41,7 @@ class MainMenuState extends MusicBeatState
 		'credits',
 		#if !switch 'donate', #end
 		'options'
+		'rsych'
 	];
 
 	var magenta:FlxSprite;
@@ -248,6 +249,8 @@ class MainMenuState extends MusicBeatState
 										MusicBeatState.switchState(new CreditsState());
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
+									case 'options':
+										LoadingState.loadAndSwitchState(new RsychState());
 								}
 							});
 						}
