@@ -35,8 +35,6 @@ using StringTools;
 
 class RsychState extends MusicBeatState
 {
-	var mods:Array<ModMetadata> = [];
-	static var changedAThing = false;
 	var bg:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
