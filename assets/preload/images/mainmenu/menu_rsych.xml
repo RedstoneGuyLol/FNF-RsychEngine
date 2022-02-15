@@ -2,22 +2,22 @@
 <TextureAtlas imagePath="menu_rsych.png">
 	<!-- Created with Adobe Animate version 18.0.1.115 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="rsych basic0000" x="0" y="0" width="413" height="167" frameX="-12" frameY="-5" frameWidth="425" frameHeight="180"/>
-	<SubTexture name="rsych basic0001" x="0" y="0" width="413" height="167" frameX="-12" frameY="-5" frameWidth="425" frameHeight="180"/>
-	<SubTexture name="rsych basic0002" x="0" y="0" width="413" height="167" frameX="-12" frameY="-5" frameWidth="425" frameHeight="180"/>
-	<SubTexture name="rsych basic0003" x="0" y="167" width="422" height="180" frameX="0" frameY="0" frameWidth="425" frameHeight="180"/>
-	<SubTexture name="rsych basic0004" x="0" y="167" width="422" height="180" frameX="0" frameY="0" frameWidth="425" frameHeight="180"/>
-	<SubTexture name="rsych basic0005" x="0" y="167" width="422" height="180" frameX="0" frameY="0" frameWidth="425" frameHeight="180"/>
-	<SubTexture name="rsych basic0006" x="0" y="347" width="407" height="175" frameX="-14" frameY="-5" frameWidth="425" frameHeight="180"/>
-	<SubTexture name="rsych basic0007" x="0" y="347" width="407" height="175" frameX="-14" frameY="-5" frameWidth="425" frameHeight="180"/>
-	<SubTexture name="rsych basic0008" x="0" y="347" width="407" height="175" frameX="-14" frameY="-5" frameWidth="425" frameHeight="180"/>
-	<SubTexture name="rsych white0000" x="0" y="522" width="391" height="147" frameX="-11" frameY="-1" frameWidth="402" frameHeight="154"/>
-	<SubTexture name="rsych white0001" x="0" y="522" width="391" height="147" frameX="-11" frameY="-1" frameWidth="402" frameHeight="154"/>
-	<SubTexture name="rsych white0002" x="0" y="522" width="391" height="147" frameX="-11" frameY="-1" frameWidth="402" frameHeight="154"/>
-	<SubTexture name="rsych white0003" x="0" y="669" width="398" height="152" frameX="0" frameY="0" frameWidth="402" frameHeight="154"/>
-	<SubTexture name="rsych white0004" x="0" y="669" width="398" height="152" frameX="0" frameY="0" frameWidth="402" frameHeight="154"/>
-	<SubTexture name="rsych white0005" x="0" y="669" width="398" height="152" frameX="0" frameY="0" frameWidth="402" frameHeight="154"/>
-	<SubTexture name="rsych white0006" x="0" y="821" width="387" height="151" frameX="-12" frameY="-3" frameWidth="402" frameHeight="154"/>
-	<SubTexture name="rsych white0007" x="0" y="821" width="387" height="151" frameX="-12" frameY="-3" frameWidth="402" frameHeight="154"/>
-	<SubTexture name="rsych white0008" x="0" y="821" width="387" height="151" frameX="-12" frameY="-3" frameWidth="402" frameHeight="154"/>
+	<SubTexture name="rsych white0000" x="0" y="0" width="413" height="167" frameX="-12" frameY="-5" frameWidth="425" frameHeight="180"/>
+	<SubTexture name="rsych white0001" x="0" y="0" width="413" height="167" frameX="-12" frameY="-5" frameWidth="425" frameHeight="180"/>
+	<SubTexture name="rsych white0002" x="0" y="0" width="413" height="167" frameX="-12" frameY="-5" frameWidth="425" frameHeight="180"/>
+	<SubTexture name="rsych white0003" x="0" y="167" width="422" height="180" frameX="0" frameY="0" frameWidth="425" frameHeight="180"/>
+	<SubTexture name="rsych white0004" x="0" y="167" width="422" height="180" frameX="0" frameY="0" frameWidth="425" frameHeight="180"/>
+	<SubTexture name="rsych white0005" x="0" y="167" width="422" height="180" frameX="0" frameY="0" frameWidth="425" frameHeight="180"/>
+	<SubTexture name="rsych white0006" x="0" y="347" width="407" height="175" frameX="-14" frameY="-5" frameWidth="425" frameHeight="180"/>
+	<SubTexture name="rsych white0007" x="0" y="347" width="407" height="175" frameX="-14" frameY="-5" frameWidth="425" frameHeight="180"/>
+	<SubTexture name="rsych white0008" x="0" y="347" width="407" height="175" frameX="-14" frameY="-5" frameWidth="425" frameHeight="180"/>
+	<SubTexture name="rsych basic0000" x="0" y="522" width="391" height="147" frameX="-11" frameY="-1" frameWidth="402" frameHeight="154"/>
+	<SubTexture name="rsych basic0001" x="0" y="522" width="391" height="147" frameX="-11" frameY="-1" frameWidth="402" frameHeight="154"/>
+	<SubTexture name="rsych basic0002" x="0" y="522" width="391" height="147" frameX="-11" frameY="-1" frameWidth="402" frameHeight="154"/>
+	<SubTexture name="rsych basic0003" x="0" y="669" width="398" height="152" frameX="0" frameY="0" frameWidth="402" frameHeight="154"/>
+	<SubTexture name="rsych basic0004" x="0" y="669" width="398" height="152" frameX="0" frameY="0" frameWidth="402" frameHeight="154"/>
+	<SubTexture name="rsych basic0005" x="0" y="669" width="398" height="152" frameX="0" frameY="0" frameWidth="402" frameHeight="154"/>
+	<SubTexture name="rsych basic0006" x="0" y="821" width="387" height="151" frameX="-12" frameY="-3" frameWidth="402" frameHeight="154"/>
+	<SubTexture name="rsych basic0007" x="0" y="821" width="387" height="151" frameX="-12" frameY="-3" frameWidth="402" frameHeight="154"/>
+	<SubTexture name="rsych basic0008" x="0" y="821" width="387" height="151" frameX="-12" frameY="-3" frameWidth="402" frameHeight="154"/>
 </TextureAtlas>
