@@ -51,6 +51,8 @@ class RsychState extends MusicBeatState
 		add(bg);
 		bg.screenCenter();
 		
+		var canExit:Bool = true;
+		
 		if(canExit && controls.BACK)
 		{
 			if(colorTween != null) {
