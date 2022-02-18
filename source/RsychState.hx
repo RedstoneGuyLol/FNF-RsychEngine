@@ -50,6 +50,26 @@ class RsychState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 		bg.screenCenter();
-    
+		
+		if(canExit && controls.BACK)
+		{
+			if(colorTween != null) {
+				colorTween.cancel();
+			}
+			FlxG.sound.play(Paths.sound('cancelMenu'));
+			FlxG.mouse.visible = false;
+			saveTxt();
+			if(needaReset){
+			//MusicBeatState.switchState(new TitleState());
+			TitleState.initialized = false;
+			TitleState.closedState = false;
+			FlxG.sound.music.fadeOut(0.3);
+			FlxG.camera.fade(FlxColor.BLACK, 0.5, false, FlxG.resetGame, false);
+			}else{
+			MusicBeatState.switchState(new MainMenuState());
+				
+			}
+		}
+		
 	}
 }
