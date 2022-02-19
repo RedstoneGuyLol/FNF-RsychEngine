@@ -60,18 +60,9 @@ class RsychState extends MusicBeatState
 			}
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			FlxG.mouse.visible = false;
-			saveTxt();
-			if(needaReset){
-			//MusicBeatState.switchState(new TitleState());
-			TitleState.initialized = false;
-			TitleState.closedState = false;
-			FlxG.sound.music.fadeOut(0.3);
-			FlxG.camera.fade(FlxColor.BLACK, 0.5, false, FlxG.resetGame, false);
-			}else{
 			MusicBeatState.switchState(new MainMenuState());
 				
 			}
 		}
-		
 	}
 }
