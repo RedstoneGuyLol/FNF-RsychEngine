@@ -55,11 +55,6 @@ class RsychState extends MusicBeatState
 		
 		if(canExit && controls.BACK)
 		{
-			if(colorTween != null) {
-				colorTween.cancel();
-			}
-			FlxG.sound.play(Paths.sound('cancelMenu'));
-			FlxG.mouse.visible = false;
 			MusicBeatState.switchState(new MainMenuState());			
 		}
 	}
