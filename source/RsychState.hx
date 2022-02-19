@@ -60,9 +60,7 @@ class RsychState extends MusicBeatState
 			}
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			FlxG.mouse.visible = false;
-			MusicBeatState.switchState(new MainMenuState());
-				
-			}
+			MusicBeatState.switchState(new MainMenuState());			
 		}
 	}
 }
