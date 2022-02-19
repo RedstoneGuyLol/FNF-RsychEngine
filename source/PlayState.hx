@@ -1022,7 +1022,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 	
-		var creditText:FlxText = new FlxText(876, 648, 348);
+		var creditText:FlxText = new FlxText(861, 603, 348);
 		creditText.text = songName + ' | ' + storyDifficultyText;
 		creditText.setFormat(Paths.font("vcr.ttf"), 15, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		creditText.cameras = [camHUD];
