@@ -1024,7 +1024,7 @@ class PlayState extends MusicBeatState
 	
 		var creditText:FlxText = new FlxText(876, 648, 348);
 		creditText.text = songName + ' | ' + storyDifficultyText;
-		creditText.setFormat(Paths.font("vcr.ttf"), 30, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		creditText.setFormat(Paths.font("vcr.ttf"), 15, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		creditText.cameras = [camHUD];
 		creditText.scrollFactor.set();
 		add(creditText);
