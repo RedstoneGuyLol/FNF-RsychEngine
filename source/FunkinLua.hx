@@ -675,9 +675,7 @@ class FunkinLua {
 			return PlayState.instance.health;
 		});
 		Lua_helper.add_callback(lua, "playSong", function(json:String, name:String) {
-			var file:String = json;
-			var folder:String = name;
-			PlayState.SONG = Song.loadFromJson(file, folder);
+			PlayState.SONG = Song.loadFromJson(json, name);
 			FlxG.switchState(new PlayState());
 		});
 		Lua_helper.add_callback(lua, "getColorFromHex", function(color:String) {
