@@ -2350,6 +2350,7 @@ class PlayState extends MusicBeatState
 				scoreTxt.text = 'Score: ' + songScore + ' | Hits: ' + songHits + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
 			} else {
 				scoreTxt.text = 'Score: ' + songScore + ' | Hits: ' + songHits + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
+			}
 		} 
 		else
 		{
