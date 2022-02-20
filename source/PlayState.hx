@@ -2345,7 +2345,7 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		if(ClientPrefs.classicmode == 'false') {
+		if(ClientPrefs.classicmode == false) {
 			if(ratingName == '?') {
 				scoreTxt.text = 'Score: ' + songScore + ' | Hits: ' + songHits + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
 			} else {
