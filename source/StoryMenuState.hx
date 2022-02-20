@@ -325,14 +325,27 @@ class StoryMenuState extends MusicBeatState
 		if (curDifficulty >= CoolUtil.difficulties.length) {
 			curDifficulty = 0;
 		}
-		if (curDifficulty == 1) {
-			FlxG.sound.play(Paths.sound('normal'));
+		if (controls.UI_LEFT) {
+			if (curDifficulty == 1) {
+				FlxG.sound.play(Paths.sound('normal'));
+			}
+			if (curDifficulty == 2) {
+				FlxG.sound.play(Paths.sound('hard'));
+			}
+			if (curDifficulty == 0) {
+				FlxG.sound.play(Paths.sound('easy'));
+			}
 		}
-		if (curDifficulty == 2) {
-			FlxG.sound.play(Paths.sound('hard'));
-		}
-		if (curDifficulty == 0) {
-			FlxG.sound.play(Paths.sound('easy'));
+			else if (controls.UI_RIGHT)
+			if (curDifficulty == 1) {
+				FlxG.sound.play(Paths.sound('normal'));
+			}
+			if (curDifficulty == 2) {
+				FlxG.sound.play(Paths.sound('hard'));
+			}
+			if (curDifficulty == 0) {
+				FlxG.sound.play(Paths.sound('easy'));
+			}
 		}
 
 		var image:Dynamic = Paths.image('menudifficulties/' + Paths.formatToSongPath(CoolUtil.difficulties[curDifficulty]));
