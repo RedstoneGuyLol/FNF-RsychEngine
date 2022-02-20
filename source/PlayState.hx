@@ -2345,10 +2345,13 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		if(ratingName == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Hits: ' + songHits + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
+		if(ClientPrefs.classicmode == 'false') {
+			if(ratingName == '?') {
+				scoreTxt.text = 'Score: ' + songScore + ' | Hits: ' + songHits + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
+			} else {
+				scoreTxt.text = 'Score: ' + songScore + ' | Hits: ' + songHits + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
 		} else {
-			scoreTxt.text = 'Score: ' + songScore + ' | Hits: ' + songHits + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
+		scoreTxt.text = 'Score: ' + songScore;
 		}
 
 		if(botplayTxt.visible) {
