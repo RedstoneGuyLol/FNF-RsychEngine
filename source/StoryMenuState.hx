@@ -325,13 +325,13 @@ class StoryMenuState extends MusicBeatState
 		if (curDifficulty >= CoolUtil.difficulties.length) {
 			curDifficulty = 0;
 		}
-		if (curDifficulty = 0) {
+		if (curDifficulty == 0) {
 			FlxG.sound.play(Paths.sound('normal'));
 		}
-		if (curDifficulty = 1) {
+		if (curDifficulty == 1) {
 			FlxG.sound.play(Paths.sound('hard'));
 		}
-		if (curDifficulty = -1) {
+		if (curDifficulty == -1) {
 			FlxG.sound.play(Paths.sound('easy'));
 		}
 
