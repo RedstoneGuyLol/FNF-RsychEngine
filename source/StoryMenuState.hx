@@ -227,28 +227,28 @@ class StoryMenuState extends MusicBeatState
 			else
 				leftArrow.animation.play('idle');
 			
-		if (controls.UI_LEFT) {
-			if (curDifficulty == 1) {
-				FlxG.sound.play(Paths.sound('normal'));
+			if (controls.UI_LEFT) {
+				if (curDifficulty == 1) {
+					FlxG.sound.play(Paths.sound('normal'));
+				}
+				if (curDifficulty == 2) {
+					FlxG.sound.play(Paths.sound('hard'));
+				}
+				if (curDifficulty == 0) {
+					FlxG.sound.play(Paths.sound('easy'));
+				}
 			}
-			if (curDifficulty == 2) {
-				FlxG.sound.play(Paths.sound('hard'));
+				else if (controls.UI_RIGHT) {
+				if (curDifficulty == 1) {
+					FlxG.sound.play(Paths.sound('normal'));
+				}
+				if (curDifficulty == 2) {
+					FlxG.sound.play(Paths.sound('hard'));
+				}
+				if (curDifficulty == 0) {
+					FlxG.sound.play(Paths.sound('easy'));
+				}
 			}
-			if (curDifficulty == 0) {
-				FlxG.sound.play(Paths.sound('easy'));
-			}
-		}
-			else if (controls.UI_RIGHT)
-			if (curDifficulty == 1) {
-				FlxG.sound.play(Paths.sound('normal'));
-			}
-			if (curDifficulty == 2) {
-				FlxG.sound.play(Paths.sound('hard'));
-			}
-			if (curDifficulty == 0) {
-				FlxG.sound.play(Paths.sound('easy'));
-			}
-		}
 
 			if (controls.UI_RIGHT_P)
 				changeDifficulty(1);
