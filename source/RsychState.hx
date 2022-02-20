@@ -53,9 +53,11 @@ class RsychState extends MusicBeatState
 		
 		var canExit:Bool = true;
 		
-		if(canExit && controls.BACK)
+		if (controls.BACK)
 		{
-			MusicBeatState.switchState(new MainMenuState());			
+			selectedSomethin = true;
+			FlxG.sound.play(Paths.sound('cancelMenu'));
+			MusicBeatState.switchState(new MainMenuState());
 		}
 	}
 }
