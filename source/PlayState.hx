@@ -3298,7 +3298,7 @@ for (key => value in luaShaders)
 
 				if (storyPlaylist.length <= 0)
 				{
-					if (ClientPrefs.classicmode == false) {
+					if (ClientPrefs.mutemenu == false) {
 						FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					}
 
@@ -3369,7 +3369,7 @@ for (key => value in luaShaders)
 					CustomFadeTransition.nextCamera = null;
 				}
 				MusicBeatState.switchState(new FreeplayState());
-				if (ClientPrefs.classicmode == false) {
+				if (ClientPrefs.mutemenu == false) {
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				}
 				changedDifficulty = false;
