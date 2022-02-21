@@ -33,6 +33,7 @@ class StoryMenuState extends MusicBeatState
 
 	private static var lastDifficultyName:String = '';
 	var curDifficulty:Int = 1;
+	var diffiSounds:Int = 0;
 
 	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
@@ -227,35 +228,48 @@ class StoryMenuState extends MusicBeatState
 			else
 				leftArrow.animation.play('idle');
 			
+
+			if (controls.UI_RIGHT_P) {
+				changeDifficulty(1);
+				diffiSounds = diffiSounds + 
+					if (diffiSounds == 2) {
+						diffiSounds = -1
+					}
+			}
+			else if (controls.UI_LEFT_P) {
+				changeDifficulty(-1);
+				diffiSounds = diffiSounds - 1
+					if (diffiSounds == -2) {
+						diffiSounds = 1
+					}
+			}
+						
+			else if (upP || downP)
+				changeDifficulty();
+				diffiSounds = diffiSounds
+
 			if (controls.UI_LEFT_P) {
-				if (curDifficulty == 1) {
+				if (diffiSounds == 0) {
 					FlxG.sound.play(Paths.sound('normal'));
 				}
-				if (curDifficulty == 2) {
+				if (diffiSounds == 1) {
 					FlxG.sound.play(Paths.sound('hard'));
 				}
-				if (curDifficulty == 0) {
+				if (diffiSounds == -1) {
 					FlxG.sound.play(Paths.sound('easy'));
 				}
 			}
 				else if (controls.UI_RIGHT_P) {
-				if (curDifficulty == 1) {
+				if (curDifficulty == 0) {
 					FlxG.sound.play(Paths.sound('normal'));
 				}
-				if (curDifficulty == 2) {
+				if (curDifficulty == 1) {
 					FlxG.sound.play(Paths.sound('hard'));
 				}
-				if (curDifficulty == 0) {
+				if (curDifficulty == -2) {
 					FlxG.sound.play(Paths.sound('easy'));
 				}
 			}
-
-			if (controls.UI_RIGHT_P)
-				changeDifficulty(1);
-			else if (controls.UI_LEFT_P)
-				changeDifficulty(-1);
-			else if (upP || downP)
-				changeDifficulty();
 
 			if(FlxG.keys.justPressed.CONTROL)
 			{
