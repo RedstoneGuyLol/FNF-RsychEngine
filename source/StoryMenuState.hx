@@ -259,13 +259,13 @@ class StoryMenuState extends MusicBeatState
 				}
 			}
 				else if (controls.UI_RIGHT_P) {
-				if (curDifficulty == 0) {
+				if (diffiSounds == 0) {
 					FlxG.sound.play(Paths.sound('normal'));
 				}
-				if (curDifficulty == 1) {
+				if (diffiSounds == 1) {
 					FlxG.sound.play(Paths.sound('hard'));
 				}
-				if (curDifficulty == -1) {
+				if (diffiSounds == -1) {
 					FlxG.sound.play(Paths.sound('easy'));
 				}
 			}
