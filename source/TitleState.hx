@@ -244,7 +244,7 @@ class TitleState extends MusicBeatState
 			// music.play();
 
 			if(FlxG.sound.music == null) {
-				if (ClientPrefs.classicmode == false) {
+				if (ClientPrefs.mutemenu == false) {
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
