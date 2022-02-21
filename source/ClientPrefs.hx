@@ -20,6 +20,7 @@ class ClientPrefs {
 	public static var camZooms:Bool = true;
 	public static var hideHud:Bool = false;
 	public static var classicmode:Bool = false;
+	public static var mutemenu:Bool = false;
 	public static var noteOffset:Int = 0;
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 	public static var imagesPersist:Bool = false;
@@ -181,6 +182,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.classicmode != null) {
 			classicmode = FlxG.save.data.classicmode;
+		}
+		if(FlxG.save.data.mutemenu != null) {
+			mutemenu = FlxG.save.data.mutemenu;
 		}
 		if(FlxG.save.data.noteOffset != null) {
 			noteOffset = FlxG.save.data.noteOffset;
