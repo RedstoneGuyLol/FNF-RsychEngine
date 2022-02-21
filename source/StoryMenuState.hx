@@ -265,7 +265,7 @@ class StoryMenuState extends MusicBeatState
 				if (curDifficulty == 1) {
 					FlxG.sound.play(Paths.sound('hard'));
 				}
-				if (curDifficulty == -2) {
+				if (curDifficulty == -1) {
 					FlxG.sound.play(Paths.sound('easy'));
 				}
 			}
