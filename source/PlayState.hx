@@ -3298,7 +3298,9 @@ for (key => value in luaShaders)
 
 				if (storyPlaylist.length <= 0)
 				{
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					if (ClientPrefs.classicmode == false) {
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					}
 
 					cancelMusicFadeTween();
 					if(FlxTransitionableState.skipNextTransIn) {
@@ -3367,7 +3369,9 @@ for (key => value in luaShaders)
 					CustomFadeTransition.nextCamera = null;
 				}
 				MusicBeatState.switchState(new FreeplayState());
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				if (ClientPrefs.classicmode == false) {
+					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				}
 				changedDifficulty = false;
 			}
 			transitioning = true;
