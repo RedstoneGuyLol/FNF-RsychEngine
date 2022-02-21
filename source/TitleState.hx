@@ -244,9 +244,11 @@ class TitleState extends MusicBeatState
 			// music.play();
 
 			if(FlxG.sound.music == null) {
-				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+				if (ClientPrefs.classicmode == false) {
+					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 
-				FlxG.sound.music.fadeIn(4, 0, 0.7);
+					FlxG.sound.music.fadeIn(4, 0, 0.7);
+				}
 			}
 		}
 
