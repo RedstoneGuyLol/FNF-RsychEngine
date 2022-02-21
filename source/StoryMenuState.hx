@@ -246,7 +246,6 @@ class StoryMenuState extends MusicBeatState
 						
 			else if (upP || downP)
 				changeDifficulty();
-				diffiSounds = diffiSounds;
 
 			if (controls.UI_LEFT_P) {
 				if (diffiSounds == 0) {
