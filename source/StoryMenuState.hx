@@ -227,7 +227,7 @@ class StoryMenuState extends MusicBeatState
 			else
 				leftArrow.animation.play('idle');
 			
-			if (controls.UI_LEFT) {
+			if (controls.UI_LEFT_P) {
 				if (curDifficulty == 1) {
 					FlxG.sound.play(Paths.sound('normal'));
 				}
@@ -238,7 +238,7 @@ class StoryMenuState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('easy'));
 				}
 			}
-				else if (controls.UI_RIGHT) {
+				else if (controls.UI_RIGHT_P) {
 				if (curDifficulty == 1) {
 					FlxG.sound.play(Paths.sound('normal'));
 				}
