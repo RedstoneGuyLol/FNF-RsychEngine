@@ -231,22 +231,22 @@ class StoryMenuState extends MusicBeatState
 
 			if (controls.UI_RIGHT_P) {
 				changeDifficulty(1);
-				diffiSounds = diffiSounds + 
+				diffiSounds = diffiSounds + 1;
 					if (diffiSounds == 2) {
-						diffiSounds = -1
+						diffiSounds = -1;
 					}
 			}
 			else if (controls.UI_LEFT_P) {
 				changeDifficulty(-1);
-				diffiSounds = diffiSounds - 1
+				diffiSounds = diffiSounds - 1;
 					if (diffiSounds == -2) {
-						diffiSounds = 1
+						diffiSounds = 1;
 					}
 			}
 						
 			else if (upP || downP)
 				changeDifficulty();
-				diffiSounds = diffiSounds
+				diffiSounds = diffiSounds;
 
 			if (controls.UI_LEFT_P) {
 				if (diffiSounds == 0) {
