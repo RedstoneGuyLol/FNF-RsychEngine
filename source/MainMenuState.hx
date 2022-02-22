@@ -256,7 +256,7 @@ class MainMenuState extends MusicBeatState
 										PlayState.storyPlaylist = ['bopeebo', 'fresh', 'dad-battle', 'spookeez', 'monster', 'pico', 'philly-nice', 'satin-panties', 'high', 'milf', 'cocoa', 'eggnog', 'winter-horrorland', 'senpai', 'rose', 'thorns'];
 
 										PlayState.isStoryMode = true;
-										PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyDifficulty[0].toLowerCase());
+										PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + '-hard', PlayState.storyPlaylist[0]);
 										LoadingState.loadAndSwitchState(new PlayState());
 								}
 							});
