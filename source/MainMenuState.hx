@@ -253,7 +253,7 @@ class MainMenuState extends MusicBeatState
 									case 'rsych':
 										LoadingState.loadAndSwitchState(new RsychState());
 									case 'mania':
-										PlayState.storyPlaylist = FreeplayState.leWeek.songs;
+										PlayState.storyPlaylist = ['bopeebo', 'fresh', 'dad-battle', 'spookeez', 'monster', 'pico', 'philly-nice', 'satin-panties', 'high', 'milf', 'cocoa', 'eggnog', 'winter-horrorland', 'senpai', 'rose', 'thorns'];
 
 										PlayState.isStoryMode = true;
 										PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + '-hard', PlayState.storyPlaylist[0]);
