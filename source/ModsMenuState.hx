@@ -355,7 +355,7 @@ class ModsMenuState extends MusicBeatState
 			arr.push(i);
 		}
 		return arr;
-	}
+	}*/
 	function addToModsList(values:Array<Dynamic>)
 	{
 		for (i in 0...modsList.length)
@@ -367,7 +367,7 @@ class ModsMenuState extends MusicBeatState
 			}
 		}
 		modsList.push(values);
-	}*/
+	}
 
 	function updateButtonToggle()
 	{
