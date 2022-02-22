@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="maniabutton.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="mania basic0000" x="0" y="0" width="501" height="169" frameX="0" frameY="-2" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania basic0001" x="0" y="0" width="501" height="169" frameX="0" frameY="-2" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania basic0002" x="0" y="0" width="501" height="169" frameX="0" frameY="-2" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania basic0003" x="501" y="0" width="491" height="181" frameX="-10" frameY="-3" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania basic0004" x="501" y="0" width="491" height="181" frameX="-10" frameY="-3" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania basic0005" x="501" y="0" width="491" height="181" frameX="-10" frameY="-3" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania basic0006" x="0" y="181" width="508" height="176" frameX="-3" frameY="0" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania basic0007" x="0" y="181" width="508" height="176" frameX="-3" frameY="0" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania basic0008" x="0" y="181" width="508" height="176" frameX="-3" frameY="0" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania white0000" x="508" y="181" width="501" height="169" frameX="0" frameY="-2" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania white0001" x="508" y="181" width="501" height="169" frameX="0" frameY="-2" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania white0002" x="508" y="181" width="501" height="169" frameX="0" frameY="-2" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania white0003" x="0" y="357" width="491" height="181" frameX="-10" frameY="-3" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania white0004" x="0" y="357" width="491" height="181" frameX="-10" frameY="-3" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania white0005" x="0" y="357" width="491" height="181" frameX="-10" frameY="-3" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania white0006" x="491" y="357" width="508" height="176" frameX="-3" frameY="0" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania white0007" x="491" y="357" width="508" height="176" frameX="-3" frameY="0" frameWidth="511" frameHeight="184"/>
+	<SubTexture name="mania white0008" x="491" y="357" width="508" height="176" frameX="-3" frameY="0" frameWidth="511" frameHeight="184"/>
+</TextureAtlas>
