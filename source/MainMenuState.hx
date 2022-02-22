@@ -36,6 +36,7 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
+		'mania',
 		#if MODS_ALLOWED 'mods', #end
 		#if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
@@ -251,6 +252,12 @@ class MainMenuState extends MusicBeatState
 										LoadingState.loadAndSwitchState(new options.OptionsState());
 									case 'rsych':
 										LoadingState.loadAndSwitchState(new RsychState());
+									case 'mania':
+										PlayState.storyPlaylist = ['bopeebo', 'fresh', 'dad-battle', 'spookeez', 'monster', 'pico', 'philly-nice', 'satin-panties', 'high', 'milf', 'cocoa', 'eggnog', 'winter-horrorland', 'senpai', 'rose', 'thorns'];
+
+										PlayState.isStoryMode = true;
+										PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyDifficulty[0].toLowerCase());
+										LoadingState.loadAndSwitchState(new PlayState());
 								}
 							});
 						}
