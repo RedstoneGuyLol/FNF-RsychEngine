@@ -109,7 +109,9 @@ class SpriteAnimationLibrary {
 	private function getSymbol(name:String):SpriteSymbol {
 		var pool:Array<SpriteSymbol> = getSymbolPool(name);
 		if (pool.length == 0) {
-			return new SpriteSymbol(getSymbolData(name), this, _texture);
+			var symbol:SpriteSymbol = new SpriteSymbol(getSymbolData(name), this, _texture);
+			symbol.smoothing = smoothing;
+			return symbol;
 		} else {
 			return pool.pop();
 		}
