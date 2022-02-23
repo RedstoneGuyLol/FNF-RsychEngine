@@ -256,10 +256,12 @@ class MainMenuState extends MusicBeatState
 										LoadingState.loadAndSwitchState(new RsychState());
 									case 'mania':
 										PlayState.storyPlaylist = ['bopeebo', 'fresh', 'dad-battle', 'spookeez', 'monster', 'pico', 'philly-nice', 'satin-panties', 'high', 'milf', 'cocoa', 'eggnog', 'winter-horrorland', 'senpai', 'rose', 'thorns'];
-
 										PlayState.isStoryMode = true;
-										PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + '-hard', PlayState.storyPlaylist[0]);
-										LoadingState.loadAndSwitchState(new PlayState());
+										PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyPlaylist[0].toLowerCase());
+										PlayState.campaignScore = 0;
+										PlayState.campaignMisses = 0;
+										LoadingState.loadAndSwitchState(new PlayState(), true);
+										FreeplayState.destroyFreeplayVocals();
 								}
 							});
 						}
