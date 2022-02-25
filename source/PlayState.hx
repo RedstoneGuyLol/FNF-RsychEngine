@@ -3836,7 +3836,6 @@ for (key => value in luaShaders)
 		//trace(daNote.missHealth);
 		songMisses++;
 		vocals.volume = 0;
-		vocalsdoub.volume = 0;
 		if(!practiceMode) songScore -= 10;
 		
 		totalPlayed++;
@@ -3902,7 +3901,6 @@ for (key => value in luaShaders)
 				boyfriend.playAnim(singAnimations[Std.int(Math.abs(direction))] + 'miss', true);
 			}
 			vocals.volume = 0;
-			vocalsdoub.volume = 0;
 		}
 	}
 
