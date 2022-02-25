@@ -4290,7 +4290,6 @@ for (key => value in luaShaders)
 		super.stepHit();
 		if (Math.abs(FlxG.sound.music.time - (Conductor.songPosition - Conductor.offset)) > 20
 			|| (SONG.needsVoices && Math.abs(vocals.time - (Conductor.songPosition - Conductor.offset)) > 20))
-			|| (SONG.doubleVoices && Math.abs(vocalsdoub.time - (Conductor.songPosition - Conductor.offset)) > 20)
 		{
 			resyncVocals();
 		}
