@@ -1,7 +1,6 @@
 package editors;
 
 #if desktop
-import Discord.DiscordClient;
 #end
 import Conductor.BPMChangeEvent;
 import Section.SwagSection;
@@ -428,6 +427,15 @@ class ChartingState extends MusicBeatState
 			PlayState.SONG = Song.parseJSONshit(FlxG.save.data.autosave);
 			MusicBeatState.resetState();
 		});
+		
+		var doub_voices = new FlxUICheckBox(110, reloadSongJson.y, null, null, "Double Vocal", 100);
+		doub_voices.checked = _song.doubleVoices;
+		// _song.doubleVoices = doub_voices.checked;
+		doub_voices.callback = function()
+		{
+			_song.doubleVoices = doub_voices.checked;
+			//trace('CHECKED!');
+		};
 
 		var loadEventJson:FlxButton = new FlxButton(loadAutosaveBtn.x, loadAutosaveBtn.y + 30, 'Load Events', function()
 		{
@@ -524,14 +532,6 @@ class ChartingState extends MusicBeatState
 			_song.gfVersion = characters[Std.parseInt(character)];
 			updateHeads();
 		});
-		var doub_voices = new FlxUICheckBox(stageDropDown.x, player3DropDown.y - 15, null, null, "Double Vocal", 100);
-		doub_voices.checked = _song.doubleVoices;
-		// _song.doubleVoices = doub_voices.checked;
-		doub_voices.callback = function()
-		{
-			_song.doubleVoices = doub_voices.checked;
-			//trace('CHECKED!');
-		};
 		player3DropDown.selectedLabel = _song.gfVersion;
 		blockPressWhileScrolling.push(player3DropDown);
 
