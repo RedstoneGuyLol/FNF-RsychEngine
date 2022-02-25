@@ -403,6 +403,15 @@ class ChartingState extends MusicBeatState
 			_song.needsVoices = check_voices.checked;
 			//trace('CHECKED!');
 		};
+		
+		var doub_voices = new FlxUICheckBox(110, 68, null, null, "Double Vocal", 100);
+		doub_voices.checked = _song.doubleVoices;
+		// _song.doubleVoices = doub_voices.checked;
+		doub_voices.callback = function()
+		{
+			_song.doubleVoices = doub_voices.checked;
+			//trace('CHECKED!');
+		};
 
 		var saveButton:FlxButton = new FlxButton(110, 8, "Save", function()
 		{
@@ -427,15 +436,6 @@ class ChartingState extends MusicBeatState
 			PlayState.SONG = Song.parseJSONshit(FlxG.save.data.autosave);
 			MusicBeatState.resetState();
 		});
-		
-		var doub_voices = new FlxUICheckBox(110, reloadSongJson.y, null, null, "Double Vocal", 100);
-		doub_voices.checked = _song.doubleVoices;
-		// _song.doubleVoices = doub_voices.checked;
-		doub_voices.callback = function()
-		{
-			_song.doubleVoices = doub_voices.checked;
-			//trace('CHECKED!');
-		};
 
 		var loadEventJson:FlxButton = new FlxButton(loadAutosaveBtn.x, loadAutosaveBtn.y + 30, 'Load Events', function()
 		{
