@@ -129,6 +129,7 @@ class PlayState extends MusicBeatState
 	public static var storyDifficulty:Int = 1;
 
 	public var vocals:FlxSound;
+	public var vocalsdoub:FlxSound;
 
 	public var dad:Character;
 	public var gf:Character;
@@ -1781,11 +1782,13 @@ class PlayState extends MusicBeatState
 		FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 1, false);
 		FlxG.sound.music.onComplete = finishSong;
 		vocals.play();
+		vocalsdoub.play();
 
 		if(paused) {
 			//trace('Oopsie doopsie! Paused sound');
 			FlxG.sound.music.pause();
 			vocals.pause();
+			vocalsdoub.pause();
 		}
 
 		// Song duration in a float, useful for the time left feature
@@ -1826,8 +1829,13 @@ class PlayState extends MusicBeatState
 			vocals = new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song));
 		else
 			vocals = new FlxSound();
+		if (SONG.needsVoices && SONG.doubleVoices)
+			vocalsdoub = new FlxSound().loadEmbedded(Paths.voicessec(PlayState.SONG.song));
+		else
+			vocalsdoub = new FlxSound();
 
 		FlxG.sound.list.add(vocals);
+		FlxG.sound.list.add(vocalsdoub);
 		FlxG.sound.list.add(new FlxSound().loadEmbedded(Paths.inst(PlayState.SONG.song)));
 
 		notes = new FlxTypedGroup<Note>();
@@ -2073,6 +2081,7 @@ class PlayState extends MusicBeatState
 			{
 				FlxG.sound.music.pause();
 				vocals.pause();
+				vocalsdoub.pause();
 			}
 
 			if (!startTimer.finished)
@@ -2197,11 +2206,14 @@ class PlayState extends MusicBeatState
 		if(finishTimer != null) return;
 
 		vocals.pause();
+		vocalsdoub.pause();
 
 		FlxG.sound.music.play();
 		Conductor.songPosition = FlxG.sound.music.time;
 		vocals.time = Conductor.songPosition;
+		vocalsdoub.time = Conductor.songPosition;
 		vocals.play();
+		vocalsdoub.play();
 	}
 
 	public var paused:Bool = false;
@@ -2381,6 +2393,7 @@ class PlayState extends MusicBeatState
 				if(FlxG.sound.music != null) {
 					FlxG.sound.music.pause();
 					vocals.pause();
+					vocalsdoub.pause();
 				}
 				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 				//}
@@ -2650,6 +2663,7 @@ class PlayState extends MusicBeatState
 			if(FlxG.keys.justPressed.TWO) { //Go 10 seconds into the future :O
 				FlxG.sound.music.pause();
 				vocals.pause();
+				vocalsdoub.pause();
 				Conductor.songPosition += 10000;
 				notes.forEachAlive(function(daNote:Note)
 				{
@@ -2680,7 +2694,9 @@ class PlayState extends MusicBeatState
 				FlxG.sound.music.play();
 
 				vocals.time = Conductor.songPosition;
+				vocalsdoub.time = Conductor.songPosition;
 				vocals.play();
+				vocalsdoub.play();
 			}
 		}
 		#end
@@ -3209,7 +3225,9 @@ for (key => value in luaShaders)
 		updateTime = false;
 		FlxG.sound.music.volume = 0;
 		vocals.volume = 0;
+		vocalsdoub.volume = 0;
 		vocals.pause();
+		vocalsdoub.pause();
 		if(ClientPrefs.noteOffset <= 0) {
 			finishCallback();
 		} else {
@@ -3418,6 +3436,7 @@ for (key => value in luaShaders)
 
 		// boyfriend.playAnim('hey');
 		vocals.volume = 1;
+		vocalsdoub.volume = 1;
 
 		var placement:String = Std.string(combo);
 
@@ -3809,6 +3828,7 @@ for (key => value in luaShaders)
 		if(instakillOnMiss)
 		{
 			vocals.volume = 0;
+			vocalsdoub.volume = 0;
 			doDeathCheck(true);
 		}
 
@@ -3816,6 +3836,7 @@ for (key => value in luaShaders)
 		//trace(daNote.missHealth);
 		songMisses++;
 		vocals.volume = 0;
+		vocalsdoub.volume = 0;
 		if(!practiceMode) songScore -= 10;
 		
 		totalPlayed++;
@@ -3846,6 +3867,7 @@ for (key => value in luaShaders)
 			if(instakillOnMiss)
 			{
 				vocals.volume = 0;
+				vocalsdoub.volume = 0;
 				doDeathCheck(true);
 			}
 
@@ -3880,6 +3902,7 @@ for (key => value in luaShaders)
 				boyfriend.playAnim(singAnimations[Std.int(Math.abs(direction))] + 'miss', true);
 			}
 			vocals.volume = 0;
+			vocalsdoub.volume = 0;
 		}
 	}
 
@@ -3915,6 +3938,8 @@ for (key => value in luaShaders)
 
 		if (SONG.needsVoices)
 			vocals.volume = 1;
+		if (SONG.doubleVoices)
+			vocalsdoub.volume = 1;
 
 		var time:Float = 0.15;
 		if(note.isSustainNote && !note.animation.curAnim.name.endsWith('end')) {
@@ -4031,6 +4056,7 @@ for (key => value in luaShaders)
 			}
 			note.wasGoodHit = true;
 			vocals.volume = 1;
+			vocalsdoub.volume = 1;
 
 			var isSus:Bool = note.isSustainNote; //GET OUT OF MY HEAD, GET OUT OF MY HEAD, GET OUT OF MY HEAD
 			var leData:Int = Math.round(Math.abs(note.noteData));
@@ -4264,6 +4290,7 @@ for (key => value in luaShaders)
 		super.stepHit();
 		if (Math.abs(FlxG.sound.music.time - (Conductor.songPosition - Conductor.offset)) > 20
 			|| (SONG.needsVoices && Math.abs(vocals.time - (Conductor.songPosition - Conductor.offset)) > 20))
+			|| (SONG.doubleVoices && Math.abs(vocalsdoub.time - (Conductor.songPosition - Conductor.offset)) > 20))
 		{
 			resyncVocals();
 		}
