@@ -526,7 +526,7 @@ class ChartingState extends MusicBeatState
 		});
 		var doub_voices = new FlxUICheckBox(stageDropDown.x, player3DropDown.y - 15, null, null, "Double Vocal", 100);
 		doub_voices.checked = _song.doubleVoices;
-		// _song.needsVoices = check_voices.checked;
+		// _song.doubleVoices = doub_voices.checked;
 		doub_voices.checked = function()
 		{
 			_song.doubleVoices = doub_voices.checked;
