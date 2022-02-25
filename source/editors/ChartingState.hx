@@ -206,7 +206,7 @@ class ChartingState extends MusicBeatState
 				events: [],
 				bpm: 150.0,
 				needsVoices: true,
-				DoubleVoices: false,
+				doubleVoices: false,
 				arrowSkin: '',
 				splashSkin: 'noteSplashes',//idk it would crash if i didn't
 				player1: 'bf',
@@ -525,11 +525,11 @@ class ChartingState extends MusicBeatState
 			updateHeads();
 		});
 		var doub_voices = new FlxUICheckBox(stageDropDown.x, player3DropDown.y - 15, null, null, "Double Vocal", 100);
-		doub_voices.checked = _song.DoubleVoices;
+		doub_voices.checked = _song.doubleVoices;
 		// _song.needsVoices = check_voices.checked;
 		doub_voices.checked = function()
 		{
-			_song.DoubleVoices = doub_voices.checked;
+			_song.doubleVoices = doub_voices.checked;
 			//trace('CHECKED!');
 		};
 		player3DropDown.selectedLabel = _song.gfVersion;
@@ -2768,7 +2768,7 @@ class ChartingState extends MusicBeatState
 			events: _song.events,
 			bpm: _song.bpm,
 			needsVoices: _song.needsVoices,
-			DoubleVoices: _song.DoubleVoices,
+			doubleVoices: _song.doubleVoices,
 			speed: _song.speed,
 			arrowSkin: _song.arrowSkin,
 			splashSkin: _song.splashSkin,
