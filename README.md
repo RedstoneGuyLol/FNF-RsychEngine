@@ -11,7 +11,7 @@ Things i'm not going to do:
 Todo:
 - [x] Classic Mode (Old FNF Look) (Updating Currently.)
 - [x] playSong() Lua event
-- [ ] Double Vocal (Plays two vocal .oggs for like duet parts)
+- [x] Double Vocal (Plays two vocal .oggs for like duet parts) (Buggy but works)
 - [ ] Play Sound Song event (AAAAAAA)
 - [ ] Change BG (Simple)
 
