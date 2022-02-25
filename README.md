@@ -9,8 +9,11 @@ Things i'm not going to do:
 - Stage Editor (Too Hard and I'll feel crappy after.)
 
 Todo:
-- [ ] Classic Mode (Old FNF Look)
+- [x] Classic Mode (Old FNF Look) (Updating Currently.)
 - [x] playSong() Lua event
+- [ ] Double Vocal (Plays two vocal .oggs for like duet parts)
+- [ ] Play Sound Song event (AAAAAAA)
+- [ ] Change BG (Simple)
 
 # Friday Night Funkin' - Psych Engine
 Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.
