@@ -206,6 +206,7 @@ class ChartingState extends MusicBeatState
 				events: [],
 				bpm: 150.0,
 				needsVoices: true,
+				DoubleVoices: false,
 				arrowSkin: '',
 				splashSkin: 'noteSplashes',//idk it would crash if i didn't
 				player1: 'bf',
@@ -523,6 +524,14 @@ class ChartingState extends MusicBeatState
 			_song.gfVersion = characters[Std.parseInt(character)];
 			updateHeads();
 		});
+		var doub_voices = new FlxUICheckBox(stageDropDown.x, player3DropDown.y - 15, null, null, "Double Vocal", 100);
+		doub_voices.checked = _song.DoubleVoices;
+		// _song.needsVoices = check_voices.checked;
+		doub_voices.checked = function()
+		{
+			_song.DoubleVoices = doub_voices.checked;
+			//trace('CHECKED!');
+		};
 		player3DropDown.selectedLabel = _song.gfVersion;
 		blockPressWhileScrolling.push(player3DropDown);
 
@@ -595,6 +604,7 @@ class ChartingState extends MusicBeatState
 		tab_group_song.add(UI_songTitle);
 
 		tab_group_song.add(check_voices);
+		tab_group_song.add(doub_voices);
 		tab_group_song.add(clear_events);
 		tab_group_song.add(clear_notes);
 		tab_group_song.add(saveButton);
@@ -2758,6 +2768,7 @@ class ChartingState extends MusicBeatState
 			events: _song.events,
 			bpm: _song.bpm,
 			needsVoices: _song.needsVoices,
+			DoubleVoices: _song.DoubleVoices,
 			speed: _song.speed,
 			arrowSkin: _song.arrowSkin,
 			splashSkin: _song.splashSkin,
