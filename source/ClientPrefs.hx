@@ -21,6 +21,7 @@ class ClientPrefs {
 	public static var hideHud:Bool = false;
 	public static var classicmode:Bool = false;
 	public static var mutemenu:Bool = false;
+	public static var hitsounds:Bool = false;
 	public static var noteOffset:Int = 0;
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 	public static var imagesPersist:Bool = false;
@@ -105,6 +106,8 @@ class ClientPrefs {
 		FlxG.save.data.noteOffset = noteOffset;
 		FlxG.save.data.hideHud = hideHud;
 		FlxG.save.data.classicmode = classicmode;
+		FlxG.save.data.mutemenu = mutemenu;
+		FlxG.save.data.hitsounds = hitsounds;
 		FlxG.save.data.arrowHSV = arrowHSV;
 		FlxG.save.data.imagesPersist = imagesPersist;
 		FlxG.save.data.ghostTapping = ghostTapping;
@@ -185,6 +188,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.mutemenu != null) {
 			mutemenu = FlxG.save.data.mutemenu;
+		}
+		if(FlxG.save.data.hitsounds != null) {
+			hitsounds = FlxG.save.data.hitsounds;
 		}
 		if(FlxG.save.data.noteOffset != null) {
 			noteOffset = FlxG.save.data.noteOffset;
