@@ -3991,6 +3991,10 @@ for (key => value in luaShaders)
 				combo += 1;
 				popUpScore(note);
 				if(combo > 9999) combo = 9999;
+				if (FlxG.save.data.hitsounds)
+				{
+					FlxG.sound.play(Paths.sound('ChartingTick'));
+				}
 			}
 			health += note.hitHealth * healthGain;
 
