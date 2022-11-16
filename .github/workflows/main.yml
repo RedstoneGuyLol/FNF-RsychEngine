@@ -11,3 +11,5 @@ jobs:
         with:
           token: $
           expire-in: 0days # Set this to 0 to delete all artifacts
+          
+          #ewrere
